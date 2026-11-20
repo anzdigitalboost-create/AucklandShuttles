@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 213 71% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 213 71% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 213 71% 11%;
+  --primary: 213 71% 11%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 213 71% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 45%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 213 71% 11%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 214 32% 90%;
+  --input: 214 32% 90%;
+  --ring: 211 79% 51%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand text-white font-semibold rounded-full
+           hover:bg-brand-500 transition-colors duration-200 shadow-md hover:shadow-lg;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-sun text-ink font-bold rounded-full
+           hover:bg-sun-600 transition-colors duration-200 shadow-md hover:shadow-lg;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 text-white font-semibold rounded-full
+           border border-white/25 hover:bg-white/20 transition-colors duration-200;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-brand text-brand font-semibold rounded-full
+           hover:bg-brand hover:text-white transition-colors duration-200;
+  }
+  .eyebrow {
+    @apply text-brand text-sm font-semibold uppercase tracking-wider;
+  }
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  /* Deep-navy hero surface with a harbour-blue glow, shared by every page hero. */
+  .hero-surface {
+    background:
+      radial-gradient(900px 500px at 85% 0%, rgba(29, 127, 229, 0.38), transparent 60%),
+      radial-gradient(600px 400px at 0% 100%, rgba(255, 183, 3, 0.12), transparent 60%),
+      linear-gradient(160deg, #081A30 0%, #0C2545 55%, #0E3F77 100%);
+  }
+}
