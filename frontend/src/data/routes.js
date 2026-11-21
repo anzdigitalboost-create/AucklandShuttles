@@ -32,7 +32,7 @@ export const META = {
   },
   about: {
     title: 'About Auckland Shuttles',
-    desc: 'Auckland Shuttles is the Auckland airport and private shuttle service operated by Book A Ride NZ — local drivers, modern Toyota Hiace vans and online booking with fixed prices.',
+    desc: 'Auckland Shuttles is the Auckland airport and private shuttle service operated by Gap Digital — local drivers, modern Toyota Hiace vans and online booking with fixed prices.',
   },
   contact: {
     title: 'Contact Auckland Shuttles',

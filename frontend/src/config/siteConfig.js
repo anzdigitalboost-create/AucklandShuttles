@@ -13,7 +13,7 @@ const siteConfig = {
   email: EMAIL,
   phone: PHONE_TEL,
   phoneDisplay: PHONE_DISPLAY,
-  operator: 'Book A Ride NZ',
+  operator: 'Gap Digital',
   tagline: 'Auckland Airport Shuttle & Private Shuttle Service',
   description:
     'Auckland shuttle service to and from Auckland Airport. Private door-to-door shuttles across Auckland, 24/7, fixed prices, flight tracking. Book online in 60 seconds.',

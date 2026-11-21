@@ -15,7 +15,7 @@ export default function Terms() {
         <div className="prose prose-gray max-w-none space-y-8 text-slate-600 leading-relaxed">
 
           <Section title="1. Agreement">
-            <p>By booking a service through Auckland Shuttles, which is operated by Book A Ride NZ ("we", "us", "our"), you agree to these Terms and Conditions. Please read them carefully before completing your booking.</p>
+            <p>By booking a service through Auckland Shuttles, which is operated by Gap Digital ("we", "us", "our"), you agree to these Terms and Conditions. Please read them carefully before completing your booking.</p>
           </Section>
 
           <Section title="2. Bookings & Payment">
@@ -23,7 +23,7 @@ export default function Terms() {
               <li>All prices are in New Zealand Dollars (NZD) and are inclusive of GST.</li>
               <li>Payment is taken in full at the time of booking via Stripe's secure payment gateway.</li>
               <li>A booking confirmation email will be sent to the email address provided once payment is processed.</li>
-              <li>Book A Ride NZ reserves the right to refuse or cancel a booking at its discretion, in which case a full refund will be issued.</li>
+              <li>Gap Digital reserves the right to refuse or cancel a booking at its discretion, in which case a full refund will be issued.</li>
             </ul>
           </Section>
 
@@ -61,7 +61,7 @@ export default function Terms() {
           </Section>
 
           <Section title="9. Liability">
-            <p>Book A Ride NZ and its drivers are not liable for any delays caused by traffic, road conditions, weather, or other circumstances beyond our control. Our liability is limited to the value of the booking in all circumstances. We carry comprehensive public liability insurance.</p>
+            <p>Gap Digital and its drivers are not liable for any delays caused by traffic, road conditions, weather, or other circumstances beyond our control. Our liability is limited to the value of the booking in all circumstances. We carry comprehensive public liability insurance.</p>
           </Section>
 
           <Section title="10. Privacy">
@@ -77,7 +77,7 @@ export default function Terms() {
           </Section>
 
           <div className="pt-6 border-t border-slate-200 text-sm text-slate-500">
-            <p>Auckland Shuttles · operated by Book A Ride NZ · Auckland, New Zealand</p>
+            <p>Auckland Shuttles · operated by Gap Digital · Auckland, New Zealand</p>
             <p><a href="tel:+64223552808" className="text-brand underline underline-offset-2 hover:no-underline">022 355 2808</a></p>
             <p><a href="mailto:info@bookaride.co.nz" className="text-brand underline underline-offset-2 hover:no-underline">info@bookaride.co.nz</a></p>
           </div>

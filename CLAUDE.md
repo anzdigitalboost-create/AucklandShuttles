@@ -33,10 +33,11 @@ per file.
 ## Brand
 
 - Name: **Auckland Shuttles**. The footer line reads "Operated by Gap Digital"
-  (owner's wording, 2026-11-21 — do not change it back). Disclose "operated by
-  Book A Ride NZ" in About, Contact, Terms and Privacy — confirmation emails and Stripe
-  receipts come from Book A Ride NZ, and the Google reviews shown are Book A
-  Ride's.
+  (owner's wording, 2026-11-21 — do not change it back). The operator named on every page (About, Contact, Terms,
+  Privacy, meta descriptions, structured data) is **Gap Digital** (owner, 2026-11-21).
+  Confirmation emails and Stripe receipts still come from Book A Ride NZ, and the
+  Google reviews shown are Book A Ride NZ's — the About and Contact pages say so
+  in one sentence each; keep that sentence accurate until the platform changes.
 - Colours (Tailwind): `brand` harbour blue, `ink` deep navy, `sun` amber
   accent. Use these names in this repo's own components, not `gold`.
 - Logo: `src/components/Logo.jsx` (mark matches `public/favicon.svg`).
