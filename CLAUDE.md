@@ -32,8 +32,9 @@ per file.
 
 ## Brand
 
-- Name: **Auckland Shuttles**. Always disclose "operated by Book A Ride NZ"
-  in the footer, About, Terms and Privacy — confirmation emails and Stripe
+- Name: **Auckland Shuttles**. The footer line reads "Operated by Gap Digital"
+  (owner's wording, 2026-11-21 — do not change it back). Disclose "operated by
+  Book A Ride NZ" in About, Contact, Terms and Privacy — confirmation emails and Stripe
   receipts come from Book A Ride NZ, and the Google reviews shown are Book A
   Ride's.
 - Colours (Tailwind): `brand` harbour blue, `ink` deep navy, `sun` amber

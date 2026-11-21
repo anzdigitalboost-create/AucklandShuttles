@@ -84,10 +84,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <p>{t('footer.rights', { year: new Date().getFullYear() })}</p>
-          <p>
-            {t('footer.operated')}{' '}
-            <a href="https://www.bookaride.co.nz" className="text-slate-300 hover:text-white underline underline-offset-2">bookaride.co.nz</a>
-          </p>
+          <p>{t('footer.operated')}</p>
         </div>
       </div>
     </footer>

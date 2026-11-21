@@ -63,7 +63,7 @@ export default {
     terms: 'Conditions générales',
     privacy: 'Politique de confidentialité',
     rights: '© {{year}} Auckland Shuttles. Tous droits réservés.',
-    operated: 'Exploité par Book A Ride NZ : les réservations, paiements et confirmations sont gérés par Book A Ride NZ.',
+    operated: 'Exploité par Gap Digital — réservations, paiements et confirmations.',
   },
   home: {
     servicesEyebrow: 'Services de navette à Auckland',
