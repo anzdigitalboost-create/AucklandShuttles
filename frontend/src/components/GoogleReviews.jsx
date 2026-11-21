@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import api from '../lib/api'
 
 /**
@@ -9,6 +10,7 @@ import api from '../lib/api'
  */
 export default function GoogleReviews({ dark = false }) {
   const [data, setData] = useState(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     let mounted = true
@@ -33,14 +35,14 @@ export default function GoogleReviews({ dark = false }) {
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-sun fill-sun" />)}
               </div>
-              <p className={`text-sm ${dark ? 'text-white/60' : 'text-gray-500'}`}>Google Reviews</p>
+              <p className={`text-sm ${dark ? 'text-white/60' : 'text-gray-500'}`}>{t('reviews.label')}</p>
             </div>
           </div>
           <h2 className={`text-3xl sm:text-4xl font-bold mb-3 ${dark ? 'text-white' : 'text-gray-900'}`}>
-            Rated by Real Travellers
+            {t('reviews.title')}
           </h2>
           <p className={`text-lg max-w-xl mx-auto ${dark ? 'text-white/60' : 'text-gray-600'}`}>
-            Live from Google — what our passengers say after the ride.
+            {t('reviews.subtitle')}
           </p>
         </div>
 
@@ -63,7 +65,7 @@ export default function GoogleReviews({ dark = false }) {
               <p className={`leading-relaxed mb-4 text-[15px] ${dark ? 'text-white/80' : 'text-gray-600'}`}>
                 {(r.text || '').length > 220 ? `${r.text.slice(0, 220)}…` : r.text}
               </p>
-              <p className={`font-semibold text-sm ${dark ? 'text-white' : 'text-gray-900'}`}>{r.author_name || r.author || 'Verified customer'}</p>
+              <p className={`font-semibold text-sm ${dark ? 'text-white' : 'text-gray-900'}`}>{r.author_name || r.author || t('reviews.verified')}</p>
             </motion.div>
           ))}
         </div>

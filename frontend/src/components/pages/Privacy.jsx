@@ -1,7 +1,12 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Privacy() {
+  const { t } = useTranslation()
+  const notice = t('legal.notice')
   return (
     <div className="py-20 min-h-[calc(100vh-88px)]">
       <div className="container-max px-4 sm:px-6 max-w-3xl">
+        {notice && <p className="mb-6 rounded-xl bg-brand-50 border border-brand-100 px-4 py-3 text-sm text-slate-700">{notice}</p>}
         <h1 className="text-4xl font-bold text-slate-900 mb-2">Privacy Policy</h1>
         <p className="text-slate-400 text-sm mb-10">Last updated: November 2026</p>
 

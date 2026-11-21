@@ -5,7 +5,7 @@ import { SUPPORTED_LANGUAGES } from '../i18n'
 import { cn } from '../lib/cn'
 
 export default function LanguageSelector({ light = false }) {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
 
@@ -27,7 +27,7 @@ export default function LanguageSelector({ light = false }) {
           'flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
           light ? 'text-white/90 hover:text-white hover:bg-white/10' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
         )}
-        aria-label="Change language"
+        aria-label={t('common.language')}
       >
         <Globe className="w-4 h-4" />
         <span>{current.flag} {current.nativeName}</span>

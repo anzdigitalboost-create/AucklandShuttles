@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { Mail, MapPin, Clock, Calendar, ArrowRight, MessageCircle, Phone } from 'lucide-react'
 import PageMeta from '../PageMeta'
 import BookingReassurance from '../BookingReassurance'
 import { PageHero } from '../Sections'
-import { META } from '../../data/routes'
 import { PHONE_DISPLAY, PHONE_TEL, EMAIL } from '../../config/siteConfig'
 
 export default function Contact() {
+  const { t } = useTranslation()
   return (
     <div className="bg-white">
-      <PageMeta title={META.contact.title} description={META.contact.desc} />
+      <PageMeta title={t('meta.contact.title')} description={t('meta.contact.desc')} />
 
-      <PageHero eyebrow="We answer every day of the year" icon={MessageCircle} title="Contact" accent="Auckland Shuttles">
-        For a price or availability, the booking page is fastest. For anything else, call or email us.
+      <PageHero eyebrow={t('contact.eyebrow')} icon={MessageCircle} title={t('contact.title')} accent={t('contact.accent')}>
+        {t('contact.lead')}
       </PageHero>
 
       <section className="section-padding bg-slate-50">
@@ -22,10 +23,10 @@ export default function Contact() {
               <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-5">
                 <Calendar className="w-6 h-6 text-sun" />
               </div>
-              <h2 className="text-xl font-bold text-white mb-2">Book Online</h2>
-              <p className="text-white/70 leading-relaxed mb-5">Live pricing and instant email confirmation, any time of day.</p>
+              <h2 className="text-xl font-bold text-white mb-2">{t('contact.bookTitle')}</h2>
+              <p className="text-white/70 leading-relaxed mb-5">{t('contact.bookText')}</p>
               <span className="inline-flex items-center gap-2 text-sun font-semibold group-hover:gap-3 transition-all">
-                Get an instant price <ArrowRight className="w-5 h-5" />
+                {t('common.getPrice')} <ArrowRight className="w-5 h-5" />
               </span>
             </Link>
 
@@ -33,8 +34,8 @@ export default function Contact() {
               <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
                 <Phone className="w-6 h-6 text-brand" />
               </div>
-              <h2 className="text-xl font-bold text-ink mb-2">Call Us</h2>
-              <p className="text-slate-600 leading-relaxed mb-5">Group bookings, special requests or a change to your trip.</p>
+              <h2 className="text-xl font-bold text-ink mb-2">{t('contact.callTitle')}</h2>
+              <p className="text-slate-600 leading-relaxed mb-5">{t('contact.callText')}</p>
               <span className="inline-flex items-center gap-2 text-brand font-semibold group-hover:gap-3 transition-all">
                 {PHONE_DISPLAY} <ArrowRight className="w-5 h-5" />
               </span>
@@ -44,8 +45,8 @@ export default function Contact() {
               <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
                 <Mail className="w-6 h-6 text-brand" />
               </div>
-              <h2 className="text-xl font-bold text-ink mb-2">Email Us</h2>
-              <p className="text-slate-600 leading-relaxed mb-5">Include your booking reference if you already have one.</p>
+              <h2 className="text-xl font-bold text-ink mb-2">{t('contact.emailTitle')}</h2>
+              <p className="text-slate-600 leading-relaxed mb-5">{t('contact.emailText')}</p>
               <span className="inline-flex items-center gap-2 text-brand font-semibold group-hover:gap-3 transition-all break-all">
                 {EMAIL} <ArrowRight className="w-5 h-5 shrink-0" />
               </span>
@@ -56,22 +57,20 @@ export default function Contact() {
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200">
               <MapPin className="w-6 h-6 text-brand shrink-0" />
               <div>
-                <h3 className="font-semibold text-ink font-sans">Auckland, New Zealand</h3>
-                <p className="text-slate-500 text-sm">Serving the whole Auckland region, the cruise terminals and Hobbiton</p>
+                <h3 className="font-semibold text-ink font-sans">{t('footer.location')}</h3>
+                <p className="text-slate-500 text-sm">{t('contact.locText')}</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200">
               <Clock className="w-6 h-6 text-brand shrink-0" />
               <div>
-                <h3 className="font-semibold text-ink font-sans">Shuttles run 24/7</h3>
-                <p className="text-slate-500 text-sm">Early flights, late arrivals and public holidays included</p>
+                <h3 className="font-semibold text-ink font-sans">{t('contact.hoursTitle')}</h3>
+                <p className="text-slate-500 text-sm">{t('contact.hoursText')}</p>
               </div>
             </div>
           </div>
 
-          <p className="text-center text-sm text-slate-500 mt-8">
-            Auckland Shuttles is operated by Book A Ride NZ, so replies and confirmations come from Book A Ride NZ.
-          </p>
+          <p className="text-center text-sm text-slate-500 mt-8">{t('contact.operated')}</p>
           <BookingReassurance className="mt-8" />
         </div>
       </section>

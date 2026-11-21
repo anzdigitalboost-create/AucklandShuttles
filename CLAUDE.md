@@ -55,8 +55,35 @@ per file.
   changing those lines.
 - Images: only self-hosted files in `frontend/public/images/` that have been
   visually verified. Never hotlink stock photos from this repo's own pages.
-- i18n: nav, hero, stats and the sticky CTA are translated in six languages
-  (en/zh/ja/ko/es/fr) in `frontend/src/i18n.js`. Keep all six in step.
+## Languages (i18n)
+
+Every marketing page is fully translated into six languages: en, zh, ja, ko,
+es, fr. All customer-facing text lives in `frontend/src/locales/<lang>.js` —
+components contain no hard-coded copy, they call `t('section.key')`.
+
+- `locales/en.js` is the source of truth. The other five files must mirror it
+  exactly: same keys, same list lengths, same `{{placeholders}}`.
+  `npm run check:locales` enforces this and runs before every build, so a
+  missing translation **fails the build** instead of silently showing English.
+- To change or add copy: edit `en.js`, then make the matching change in all
+  five other files in the same commit.
+- English page titles/descriptions and area copy come from
+  `data/routes.js` (`META`) and `data/areas.js`; `en.js` imports them, so edit
+  them there. Translations of those live in each locale under `meta` and
+  `areas.<slug>`.
+- Icons and links are paired with translated list items **by position** (see
+  the `*_ICONS` arrays in each page). Reordering a list in the locales means
+  reordering the matching array.
+- English is in the main bundle; the other languages are lazy-loaded chunks
+  (`src/i18n.js`), fetched only when a visitor uses that language.
+- Suburb names, street names, "Auckland Shuttles" and "Book A Ride NZ" stay
+  in English in every language.
+- Not translated, by design: the booking page and payment-success page
+  (mirrored verbatim from the platform — translate them there, not here) and
+  the Terms and Privacy pages (English only, with a translated notice; do not
+  machine-translate legal text without the owner's sign-off).
+- The prerendered HTML snapshots and sitemap are English; `?lang=xx`
+  variants are rendered in the browser.
 
 ## SEO infrastructure
 

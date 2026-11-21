@@ -1,14 +1,18 @@
+// English copy here is the source for locales/en.js; translations of name,
+// intro and points live in the other locale files under `areas.<slug>`.
+//
 // Area landing pages (/areas/<slug>) are data-driven from this file: add an
 // entry here and the route, footer link, home-page card, prerender snapshot
 // and sitemap entry all follow automatically.
 //
-// Drive times are typical off-peak figures to Auckland Airport and are shown
-// as a guide only — the booking page prices and times every trip live.
+// Drive times are typical off-peak minutes to Auckland Airport (a bare range;
+// each locale adds its own unit via common.minutes) and are shown as a guide
+// only — the booking page prices and times every trip live.
 export const AREAS = {
   'auckland-cbd': {
     name: 'Auckland CBD',
     short: 'City Centre',
-    driveTime: '25–35 min',
+    driveTime: '25–35',
     seoTitle: 'Auckland CBD Airport Shuttle — City to Airport, Door to Door',
     seoDesc:
       'Private airport shuttle between Auckland CBD and Auckland Airport. Hotel and apartment pickups in the city centre, Viaduct, Britomart, Parnell and Ponsonby. Fixed price, 24/7, book online.',
@@ -24,7 +28,7 @@ export const AREAS = {
   'north-shore': {
     name: 'North Shore',
     short: 'North Shore',
-    driveTime: '35–50 min',
+    driveTime: '35–50',
     seoTitle: 'North Shore Airport Shuttle — Takapuna, Albany & Devonport to Auckland Airport',
     seoDesc:
       'Private airport shuttle from the North Shore to Auckland Airport. Door-to-door pickups in Takapuna, Albany, Devonport, Browns Bay, Glenfield and Birkenhead. Fixed price, flight tracking, book online.',
@@ -40,7 +44,7 @@ export const AREAS = {
   'west-auckland': {
     name: 'West Auckland',
     short: 'West Auckland',
-    driveTime: '30–40 min',
+    driveTime: '30–40',
     seoTitle: 'West Auckland Airport Shuttle — Henderson, New Lynn & Titirangi',
     seoDesc:
       'Private airport shuttle from West Auckland to Auckland Airport. Door-to-door pickups in Henderson, New Lynn, Te Atatu, Massey, Titirangi and Hobsonville. Fixed price, 24/7, book online.',
@@ -56,7 +60,7 @@ export const AREAS = {
   'south-auckland': {
     name: 'South Auckland',
     short: 'South Auckland',
-    driveTime: '10–25 min',
+    driveTime: '10–25',
     seoTitle: 'South Auckland Airport Shuttle — Manukau, Papakura & Pukekohe',
     seoDesc:
       'Private airport shuttle from South Auckland to Auckland Airport. Door-to-door pickups in Manukau, Papatoetoe, Manurewa, Papakura, Takanini and Pukekohe. Fixed price, flight tracking, book online.',
@@ -72,7 +76,7 @@ export const AREAS = {
   'east-auckland': {
     name: 'East Auckland',
     short: 'East Auckland',
-    driveTime: '25–40 min',
+    driveTime: '25–40',
     seoTitle: 'East Auckland Airport Shuttle — Howick, Botany & Pakuranga',
     seoDesc:
       'Private airport shuttle from East Auckland to Auckland Airport. Door-to-door pickups in Howick, Botany, Pakuranga, Half Moon Bay, Beachlands and St Heliers. Fixed price, 24/7, book online.',

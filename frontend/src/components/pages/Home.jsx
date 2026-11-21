@@ -4,48 +4,23 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Plane, MapPin, Check, Shield, Clock, Users, Ship, Baby, Luggage, CreditCard, Phone, Mountain, Navigation } from 'lucide-react'
 import GoogleReviews from '../GoogleReviews'
 import PageMeta from '../PageMeta'
-import { fadeUp, SectionHeading, FeatureGrid, Faq, CtaBand } from '../Sections'
+import { fadeUp, SectionHeading, FeatureGrid, Faq, CtaBand, withIcons } from '../Sections'
 import { AREAS } from '../../data/areas'
-import { META } from '../../data/routes'
 import { PHONE_DISPLAY, PHONE_TEL } from '../../config/siteConfig'
 
-const SERVICES = [
-  { icon: Plane, title: 'Auckland Airport Shuttle', text: 'To or from the domestic and international terminals, from any Auckland address. Your flight is tracked, so the pickup moves if the flight does.', path: '/auckland-airport-shuttle' },
-  { icon: Navigation, title: 'Private Shuttle', text: 'Point-to-point across Auckland for events, weddings, work travel or a night out. The vehicle is yours alone.', path: '/services' },
-  { icon: Ship, title: 'Cruise Terminal Shuttle', text: 'Between Queens Wharf or Princes Wharf and the airport or your hotel, with space for cruise luggage.', path: '/cruise-transfers' },
-  { icon: Mountain, title: 'Auckland to Hobbiton', text: 'A private day transfer to the Hobbiton Movie Set in Matamata and back, timed to your tour.', path: '/hobbiton-transfers' },
-]
-
-const WHY = [
-  { icon: Users, title: 'A shuttle to yourself', text: 'Every booking is private. No waiting for other passengers and no detours through other suburbs on the way.' },
-  { icon: CreditCard, title: 'One fixed price', text: 'The price is calculated from your addresses and shown before you pay. No meter, no surge pricing.' },
-  { icon: Plane, title: 'Flight tracking', text: 'Give us your flight number and we watch it. Early or delayed, your driver is there when you land.' },
-  { icon: Clock, title: 'Any hour, any day', text: 'Shuttles run 24 hours, 365 days a year, including the 4am departures and midnight arrivals.' },
-  { icon: Baby, title: 'Free child seats', text: 'Infant, child and booster seats at no charge. Tell us ages when you book and they are fitted before pickup.' },
-  { icon: Luggage, title: 'Room for luggage', text: 'High-roof vans carry up to 11 passengers with bags, and trailers handle the big loads.' },
-]
-
-const STEPS = [
-  { step: '1', title: 'Enter your trip', text: 'Pickup address, drop-off, date and passenger numbers. The price appears straight away.' },
-  { step: '2', title: 'Pay securely', text: 'Check out by card through Stripe. Your confirmation and booking reference arrive by email.' },
-  { step: '3', title: 'We track and plan', text: 'For airport pickups we follow your flight and adjust the pickup time if it changes.' },
-  { step: '4', title: 'Ride door to door', text: 'Your driver arrives at your address or meets you at the terminal, and helps with the bags.' },
-]
-
-const FAQS = [
-  { q: 'How much is a shuttle to Auckland Airport?', a: 'The price depends on your pickup address, passenger numbers and whether you book a return. Enter your trip on the booking page and you will see the exact fixed price before paying — there is no obligation to book.' },
-  { q: 'Is this a shared shuttle or a private one?', a: 'Private. The vehicle is booked for your group only, so there are no other pickups or drop-offs along the way.' },
-  { q: 'What happens if my flight is delayed?', a: 'We track arriving flights and adjust the pickup time at no extra charge. Free waiting time is 30 minutes after domestic arrivals and 60 minutes after international arrivals.' },
-  { q: 'How many people fit in one shuttle?', a: 'Up to 11 passengers per vehicle with luggage. Larger groups can be split across vehicles — call us on 022 355 2808 and we will arrange it.' },
-  { q: 'Can I cancel or change a booking?', a: 'Yes. Cancellations made more than 24 hours before pickup are refunded in full. Inside 24 hours, contact us and we will do what we can to reschedule.' },
-  { q: 'Do you charge extra at night?', a: 'Pickups between 11pm and 5:59am carry a $15 night surcharge per trip. It is included in the price you see before you pay.' },
-]
+// Icons and links pair with the translated items in locales/*.js by position.
+const SERVICE_ICONS = [Plane, Navigation, Ship, Mountain]
+const SERVICE_PATHS = ['/auckland-airport-shuttle', '/services', '/cruise-transfers', '/hobbiton-transfers']
+const WHY_ICONS = [Users, CreditCard, Plane, Clock, Baby, Luggage]
 
 export default function Home() {
   const { t } = useTranslation()
+  const services = t('home.services')
+  const steps = t('home.steps')
+
   return (
     <div className="bg-white">
-      <PageMeta title={META.home.title} description={META.home.desc} />
+      <PageMeta title={null} description={t('meta.home.desc')} />
 
       {/* ── HERO ────────────────────────────────────────────── */}
       <section className="hero-surface relative overflow-hidden">
@@ -112,7 +87,7 @@ export default function Home() {
             >
               <img
                 src="/images/fleet-van.jpg"
-                alt="Auckland Shuttles Toyota Hiace high-roof passenger van"
+                alt={t('home.fleetAlt')}
                 className="rounded-[2rem] w-full h-[520px] object-cover shadow-2xl ring-1 ring-white/20"
               />
               <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3">
@@ -120,8 +95,8 @@ export default function Home() {
                   <Users className="w-5 h-5 text-brand" />
                 </div>
                 <div>
-                  <div className="text-ink font-bold leading-tight">Up to 11 passengers</div>
-                  <div className="text-slate-500 text-sm">per vehicle, with luggage</div>
+                  <div className="text-ink font-bold leading-tight">{t('home.fleetBadgeTitle')}</div>
+                  <div className="text-slate-500 text-sm">{t('home.fleetBadgeText')}</div>
                 </div>
               </div>
             </motion.div>
@@ -147,31 +122,34 @@ export default function Home() {
       {/* ── SERVICES ────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <SectionHeading eyebrow="Auckland shuttle services" title="Where Can We Take You?">
-            One booking system for every kind of Auckland shuttle — airport runs, cruise days and private trips.
+          <SectionHeading eyebrow={t('home.servicesEyebrow')} title={t('home.servicesTitle')}>
+            {t('home.servicesText')}
           </SectionHeading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICES.map(({ icon: Icon, title, text, path }, i) => (
-              <motion.div
-                key={title}
-                initial="hidden" whileInView="visible" custom={i} variants={fadeUp}
-                viewport={{ once: true, margin: '-40px' }}
-              >
-                <Link
-                  to={path}
-                  className="group block h-full bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand hover:shadow-xl transition-all duration-300"
+            {services.map(({ title, text }, i) => {
+              const Icon = SERVICE_ICONS[i]
+              return (
+                <motion.div
+                  key={title}
+                  initial="hidden" whileInView="visible" custom={i} variants={fadeUp}
+                  viewport={{ once: true, margin: '-40px' }}
                 >
-                  <div className="w-12 h-12 bg-brand-50 group-hover:bg-brand rounded-xl flex items-center justify-center mb-5 transition-colors">
-                    <Icon className="w-6 h-6 text-brand group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-lg font-bold text-ink mb-2">{title}</h3>
-                  <p className="text-slate-600 text-[15px] leading-relaxed mb-5">{text}</p>
-                  <span className="inline-flex items-center gap-1.5 text-brand font-semibold text-sm group-hover:gap-2.5 transition-all">
-                    Learn more <ArrowRight className="w-4 h-4" />
-                  </span>
-                </Link>
-              </motion.div>
-            ))}
+                  <Link
+                    to={SERVICE_PATHS[i]}
+                    className="group block h-full bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 bg-brand-50 group-hover:bg-brand rounded-xl flex items-center justify-center mb-5 transition-colors">
+                      <Icon className="w-6 h-6 text-brand group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className="text-lg font-bold text-ink mb-2">{title}</h3>
+                    <p className="text-slate-600 text-[15px] leading-relaxed mb-5">{text}</p>
+                    <span className="inline-flex items-center gap-1.5 text-brand font-semibold text-sm group-hover:gap-2.5 transition-all">
+                      {t('common.learnMore')} <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -179,18 +157,18 @@ export default function Home() {
       {/* ── WHY ─────────────────────────────────────────────── */}
       <section className="section-padding bg-slate-50">
         <div className="container-max">
-          <SectionHeading eyebrow="Why Auckland Shuttles" title="A Simpler Way to the Airport">
-            Everything a shared shuttle or a taxi rank makes you guess at, settled before you leave the house.
+          <SectionHeading eyebrow={t('home.whyEyebrow')} title={t('home.whyTitle')}>
+            {t('home.whyText')}
           </SectionHeading>
-          <FeatureGrid items={WHY} cols={3} />
+          <FeatureGrid items={withIcons(t('home.why'), WHY_ICONS)} cols={3} />
         </div>
       </section>
 
       {/* ── AREAS ───────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <SectionHeading eyebrow="Areas we cover" title="Shuttles From Every Part of Auckland">
-            Pick your side of town for typical travel times and local pickup details.
+          <SectionHeading eyebrow={t('home.areasEyebrow')} title={t('home.areasTitle')}>
+            {t('home.areasText')}
           </SectionHeading>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {Object.entries(AREAS).map(([slug, a]) => (
@@ -200,17 +178,19 @@ export default function Home() {
                 className="group rounded-2xl border border-slate-200 p-6 hover:border-brand hover:bg-brand-50/50 transition-all"
               >
                 <MapPin className="w-6 h-6 text-brand mb-4" />
-                <h3 className="font-bold text-ink mb-1">{a.name}</h3>
-                <p className="text-sm text-slate-500 mb-4">{a.driveTime} to the airport</p>
+                <h3 className="font-bold text-ink mb-1">{t(`areas.${slug}.name`)}</h3>
+                <p className="text-sm text-slate-500 mb-4">
+                  {t('common.toAirport', { time: t('common.minutes', { range: a.driveTime }) })}
+                </p>
                 <span className="inline-flex items-center gap-1.5 text-brand font-semibold text-sm group-hover:gap-2.5 transition-all">
-                  View area <ArrowRight className="w-4 h-4" />
+                  {t('common.viewArea')} <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
             ))}
           </div>
           <p className="text-center text-sm text-slate-500 mt-6">
-            Travel times are typical off-peak figures. Not on the list? We cover the whole Auckland region — enter your address on the{' '}
-            <Link to="/book-now" className="text-brand font-semibold hover:underline">booking page</Link>.
+            {t('home.areasNote')}{' '}
+            <Link to="/book-now" className="text-brand font-semibold hover:underline">{t('home.areasNoteLink')}</Link>
           </p>
         </div>
       </section>
@@ -219,18 +199,18 @@ export default function Home() {
       <section className="section-padding bg-ink">
         <div className="container-max">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sun text-sm font-semibold uppercase tracking-wider">How it works</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-2 tracking-tight">Booked in About a Minute</h2>
+            <span className="text-sun text-sm font-semibold uppercase tracking-wider">{t('home.howEyebrow')}</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-2 tracking-tight">{t('home.howTitle')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {STEPS.map(({ step, title, text }, i) => (
+            {steps.map(({ title, text }, i) => (
               <motion.div
-                key={step}
+                key={title}
                 initial="hidden" whileInView="visible" custom={i} variants={fadeUp}
                 viewport={{ once: true, margin: '-40px' }}
                 className="rounded-2xl bg-white/[0.06] border border-white/10 p-7"
               >
-                <div className="w-11 h-11 rounded-full bg-sun text-ink font-display font-extrabold flex items-center justify-center mb-5">{step}</div>
+                <div className="w-11 h-11 rounded-full bg-sun text-ink font-display font-extrabold flex items-center justify-center mb-5">{i + 1}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
                 <p className="text-white/65 text-[15px] leading-relaxed">{text}</p>
               </motion.div>
@@ -245,8 +225,8 @@ export default function Home() {
       {/* ── FAQ ─────────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <SectionHeading eyebrow="Questions" title="Auckland Shuttle FAQs" />
-          <Faq items={FAQS} />
+          <SectionHeading eyebrow={t('common.questions')} title={t('home.faqTitle')} />
+          <Faq items={t('home.faqs')} />
         </div>
       </section>
 

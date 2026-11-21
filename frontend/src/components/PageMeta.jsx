@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const SITE_URL = 'https://www.aucklandshuttles.co.nz'
 const SITE_NAME = 'Auckland Shuttles'
@@ -33,9 +34,11 @@ function setLink(rel, href, hreflang) {
  */
 export default function PageMeta({ title, description }) {
   const { pathname } = useLocation()
+  const { t } = useTranslation()
+  const siteTitle = t('meta.siteTitle')
 
   useEffect(() => {
-    const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Auckland Airport Shuttle & Private Shuttle Service`
+    const fullTitle = title ? `${title} | ${SITE_NAME}` : siteTitle
     const url = `${SITE_URL}${pathname === '/' ? '' : pathname}`
 
     document.title = fullTitle
@@ -52,7 +55,7 @@ export default function PageMeta({ title, description }) {
     LANGS.forEach((lng) => {
       setLink('alternate', lng === 'en' ? url : `${url}?lang=${lng}`, lng)
     })
-  }, [title, description, pathname])
+  }, [title, description, pathname, siteTitle])
 
   return null
 }

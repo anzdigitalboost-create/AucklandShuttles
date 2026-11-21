@@ -41,7 +41,7 @@ export default function Header() {
       )}
     >
       <nav className="container-max px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
-        <Link to="/" aria-label="Auckland Shuttles — home" className="shrink-0">
+        <Link to="/" aria-label={t('common.logoAria')} className="shrink-0">
           <Logo />
         </Link>
 
@@ -82,7 +82,7 @@ export default function Header() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden p-2.5 rounded-full text-ink bg-slate-100 hover:bg-slate-200 transition-colors"
-          aria-label="Toggle menu"
+          aria-label={t('common.menu')}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

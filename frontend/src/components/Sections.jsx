@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { ArrowRight, Phone, ChevronDown } from 'lucide-react'
 import BookingReassurance from './BookingReassurance'
 import { PHONE_DISPLAY, PHONE_TEL } from '../config/siteConfig'
@@ -9,8 +10,12 @@ export const fadeUp = {
   visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5, ease: 'easeOut' } }),
 }
 
+/** Pair translated {title, text} items with their icons, by position. */
+export const withIcons = (items, icons) => items.map((item, i) => ({ ...item, icon: icons[i] }))
+
 /** Navy hero band used at the top of every inner page. */
 export function PageHero({ eyebrow, title, accent, children, icon: Icon }) {
+  const { t } = useTranslation()
   return (
     <section className="hero-surface relative overflow-hidden">
       <div className="container-max px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
@@ -41,7 +46,7 @@ export function PageHero({ eyebrow, title, accent, children, icon: Icon }) {
             className="flex flex-col sm:flex-row gap-3 mt-9"
           >
             <Link to="/book-now" className="btn-accent">
-              Get an Instant Price <ArrowRight className="w-5 h-5" />
+              {t('common.getPrice')} <ArrowRight className="w-5 h-5" />
             </Link>
             <a href={`tel:${PHONE_TEL}`} className="btn-ghost">
               <Phone className="w-5 h-5" /> {PHONE_DISPLAY}
@@ -116,18 +121,19 @@ export function Faq({ items }) {
 }
 
 /** Closing call-to-action band. */
-export function CtaBand({ title = 'Ready to Book Your Auckland Shuttle?', text = 'See your exact price now. Fixed rate, instant confirmation, driver at your door.' }) {
+export function CtaBand({ title, text }) {
+  const { t } = useTranslation()
   return (
     <section className="hero-surface">
       <div className="container-max px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight">{title}</h2>
-        <p className="text-lg text-white/75 mb-9 max-w-xl mx-auto">{text}</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight">{title || t('cta.title')}</h2>
+        <p className="text-lg text-white/75 mb-9 max-w-xl mx-auto">{text || t('cta.text')}</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link to="/book-now" className="btn-accent">
-            Get an Instant Price <ArrowRight className="w-5 h-5" />
+            {t('common.getPrice')} <ArrowRight className="w-5 h-5" />
           </Link>
           <a href={`tel:${PHONE_TEL}`} className="btn-ghost">
-            <Phone className="w-5 h-5" /> Call {PHONE_DISPLAY}
+            <Phone className="w-5 h-5" /> {t('common.callPhone', { phone: PHONE_DISPLAY })}
           </a>
         </div>
         <BookingReassurance dark className="mt-10" />
