@@ -300,7 +300,7 @@ export default {
   },
   legal: { notice: '' },
   meta: {
-    siteTitle: 'Auckland Shuttles — Auckland Airport Shuttle & Private Shuttle Service',
+    siteTitle: 'Auckland Shuttles — Airport & Private Shuttle Service',
     home: META.home,
     airport: META.airport,
     services: META.services,
@@ -308,5 +308,7 @@ export default {
     hobbiton: META.hobbiton,
     about: META.about,
     contact: META.contact,
+    terms: { title: "Terms & Conditions", desc: "Booking terms for Auckland Shuttles, operated by Book A Ride NZ: payment, cancellation and refunds, waiting time, luggage and liability." },
+    privacy: { title: "Privacy Policy", desc: "How Auckland Shuttles and its operator Book A Ride NZ collect, use and protect your personal information." },
   },
 }

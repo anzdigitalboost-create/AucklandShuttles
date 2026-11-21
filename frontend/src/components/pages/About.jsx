@@ -26,10 +26,10 @@ export default function About() {
             <p className="text-slate-600 text-lg leading-relaxed">{t('about.p3')}</p>
           </div>
           <img
-            src="/images/fleet-van.jpg"
+            src="/images/fleet-van.webp"
             alt={t('about.imgAlt')}
             className="rounded-3xl shadow-xl w-full h-[440px] object-cover"
-            loading="lazy"
+            width="840" height="1120" loading="lazy" decoding="async"
           />
         </div>
       </section>

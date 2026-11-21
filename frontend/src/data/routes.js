@@ -15,19 +15,19 @@ export const META = {
     desc: 'Book your Auckland shuttle in 60 seconds. Live fixed pricing, secure card payment, flight tracking and instant email confirmation.',
   },
   airport: {
-    title: 'Auckland Airport Shuttle — Private Door-to-Door Transfers',
+    title: 'Auckland Airport Shuttle — Private, Door to Door',
     desc: 'Private Auckland Airport shuttle to and from any Auckland address. Your own vehicle, no shared stops, flight tracking, free child seats and one fixed price. Book online 24/7.',
   },
   services: {
-    title: 'Auckland Shuttle Services — Airport, Private, Cruise & Group',
+    title: 'Auckland Shuttle Services — Airport, Cruise & Group',
     desc: 'Auckland shuttle services: airport shuttles, private point-to-point shuttles, cruise terminal transfers, Hobbiton day trips and group transport for up to 11 passengers per vehicle.',
   },
   cruise: {
-    title: 'Auckland Cruise Terminal Shuttle — Port to Airport Transfers',
+    title: 'Auckland Cruise Terminal Shuttle — Port to Airport',
     desc: 'Private shuttle between Auckland cruise terminals, Auckland Airport and city hotels. Luggage-friendly vans for up to 11 passengers, fixed prices, book online.',
   },
   hobbiton: {
-    title: 'Auckland to Hobbiton Shuttle — Private Day Transfer',
+    title: 'Auckland to Hobbiton Shuttle — Private Day Trip',
     desc: 'Private shuttle from Auckland to the Hobbiton Movie Set in Matamata and back. Your own vehicle and schedule, one fixed price per vehicle for up to 11 passengers.',
   },
   about: {

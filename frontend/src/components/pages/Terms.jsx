@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import PageMeta from '../PageMeta'
 
 export default function Terms() {
   const { t } = useTranslation()
@@ -6,9 +7,10 @@ export default function Terms() {
   return (
     <div className="py-20 min-h-[calc(100vh-88px)]">
       <div className="container-max px-4 sm:px-6 max-w-3xl">
+        <PageMeta title={t('meta.terms.title')} description={t('meta.terms.desc')} />
         {notice && <p className="mb-6 rounded-xl bg-brand-50 border border-brand-100 px-4 py-3 text-sm text-slate-700">{notice}</p>}
         <h1 className="text-4xl font-bold text-slate-900 mb-2">Terms &amp; Conditions</h1>
-        <p className="text-slate-400 text-sm mb-10">Last updated: November 2026</p>
+        <p className="text-slate-500 text-sm mb-10">Last updated: November 2026</p>
 
         <div className="prose prose-gray max-w-none space-y-8 text-slate-600 leading-relaxed">
 
@@ -63,7 +65,7 @@ export default function Terms() {
           </Section>
 
           <Section title="10. Privacy">
-            <p>Your personal information is collected and used in accordance with our <a href="/privacy-policy" className="text-brand hover:underline">Privacy Policy</a>. We do not sell your data to third parties.</p>
+            <p>Your personal information is collected and used in accordance with our <a href="/privacy-policy" className="text-brand underline underline-offset-2 hover:no-underline">Privacy Policy</a>. We do not sell your data to third parties.</p>
           </Section>
 
           <Section title="11. Changes to These Terms">
@@ -74,10 +76,10 @@ export default function Terms() {
             <p>These Terms are governed by the laws of New Zealand. Any disputes will be subject to the exclusive jurisdiction of the New Zealand courts.</p>
           </Section>
 
-          <div className="pt-6 border-t border-slate-200 text-sm text-slate-400">
+          <div className="pt-6 border-t border-slate-200 text-sm text-slate-500">
             <p>Auckland Shuttles · operated by Book A Ride NZ · Auckland, New Zealand</p>
-            <p><a href="tel:+64223552808" className="text-brand hover:underline">022 355 2808</a></p>
-            <p><a href="mailto:info@bookaride.co.nz" className="text-brand hover:underline">info@bookaride.co.nz</a></p>
+            <p><a href="tel:+64223552808" className="text-brand underline underline-offset-2 hover:no-underline">022 355 2808</a></p>
+            <p><a href="mailto:info@bookaride.co.nz" className="text-brand underline underline-offset-2 hover:no-underline">info@bookaride.co.nz</a></p>
           </div>
         </div>
       </div>

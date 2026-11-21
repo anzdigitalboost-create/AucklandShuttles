@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import PageMeta from '../PageMeta'
 
 export default function Privacy() {
   const { t } = useTranslation()
@@ -6,14 +7,15 @@ export default function Privacy() {
   return (
     <div className="py-20 min-h-[calc(100vh-88px)]">
       <div className="container-max px-4 sm:px-6 max-w-3xl">
+        <PageMeta title={t('meta.privacy.title')} description={t('meta.privacy.desc')} />
         {notice && <p className="mb-6 rounded-xl bg-brand-50 border border-brand-100 px-4 py-3 text-sm text-slate-700">{notice}</p>}
         <h1 className="text-4xl font-bold text-slate-900 mb-2">Privacy Policy</h1>
-        <p className="text-slate-400 text-sm mb-10">Last updated: November 2026</p>
+        <p className="text-slate-500 text-sm mb-10">Last updated: November 2026</p>
 
         <div className="prose prose-gray max-w-none space-y-8 text-slate-600 leading-relaxed">
 
           <Section title="1. Who We Are">
-            <p>Auckland Shuttles is operated by Book A Ride NZ ("we", "us", "our"), a private transfer and airport shuttle service based in Auckland, New Zealand. This website is <a href="https://www.aucklandshuttles.co.nz" className="text-brand hover:underline">aucklandshuttles.co.nz</a>. Bookings made here are processed and stored by Book A Ride NZ.</p>
+            <p>Auckland Shuttles is operated by Book A Ride NZ ("we", "us", "our"), a private transfer and airport shuttle service based in Auckland, New Zealand. This website is <a href="https://www.aucklandshuttles.co.nz" className="text-brand underline underline-offset-2 hover:no-underline">aucklandshuttles.co.nz</a>. Bookings made here are processed and stored by Book A Ride NZ.</p>
           </Section>
 
           <Section title="2. Information We Collect">
@@ -41,7 +43,7 @@ export default function Privacy() {
           <Section title="4. Third-Party Services">
             <p>We use the following trusted third-party services to operate our business:</p>
             <ul>
-              <li><strong>Stripe</strong> — payment processing (<a href="https://stripe.com/nz/privacy" className="text-brand hover:underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>)</li>
+              <li><strong>Stripe</strong> — payment processing (<a href="https://stripe.com/nz/privacy" className="text-brand underline underline-offset-2 hover:no-underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>)</li>
               <li><strong>Google Maps</strong> — address autocomplete and distance calculation</li>
               <li><strong>Mailgun</strong> — email delivery</li>
               <li><strong>Twilio</strong> — SMS notifications</li>
@@ -65,7 +67,7 @@ export default function Privacy() {
               <li>Request deletion of your data (subject to legal retention requirements)</li>
               <li>Opt out of marketing communications at any time</li>
             </ul>
-            <p>To exercise these rights, contact us at <a href="mailto:info@bookaride.co.nz" className="text-brand hover:underline">info@bookaride.co.nz</a>.</p>
+            <p>To exercise these rights, contact us at <a href="mailto:info@bookaride.co.nz" className="text-brand underline underline-offset-2 hover:no-underline">info@bookaride.co.nz</a>.</p>
           </Section>
 
           <Section title="8. Cookies">
@@ -79,12 +81,12 @@ export default function Privacy() {
           <Section title="10. Contact Us">
             <p>For any privacy-related questions or requests:</p>
             <ul>
-              <li>Email: <a href="mailto:info@bookaride.co.nz" className="text-brand hover:underline">info@bookaride.co.nz</a></li>
-              <li>Phone: <a href="tel:+64223552808" className="text-brand hover:underline">022 355 2808</a></li>
+              <li>Email: <a href="mailto:info@bookaride.co.nz" className="text-brand underline underline-offset-2 hover:no-underline">info@bookaride.co.nz</a></li>
+              <li>Phone: <a href="tel:+64223552808" className="text-brand underline underline-offset-2 hover:no-underline">022 355 2808</a></li>
             </ul>
           </Section>
 
-          <div className="pt-6 border-t border-slate-200 text-sm text-slate-400">
+          <div className="pt-6 border-t border-slate-200 text-sm text-slate-500">
             <p>Auckland Shuttles · operated by Book A Ride NZ · Auckland, New Zealand</p>
           </div>
         </div>

@@ -13,7 +13,7 @@ export const AREAS = {
     name: 'Auckland CBD',
     short: 'City Centre',
     driveTime: '25–35',
-    seoTitle: 'Auckland CBD Airport Shuttle — City to Airport, Door to Door',
+    seoTitle: 'Auckland CBD Airport Shuttle — City to Airport',
     seoDesc:
       'Private airport shuttle between Auckland CBD and Auckland Airport. Hotel and apartment pickups in the city centre, Viaduct, Britomart, Parnell and Ponsonby. Fixed price, 24/7, book online.',
     intro:
@@ -29,7 +29,7 @@ export const AREAS = {
     name: 'North Shore',
     short: 'North Shore',
     driveTime: '35–50',
-    seoTitle: 'North Shore Airport Shuttle — Takapuna, Albany & Devonport to Auckland Airport',
+    seoTitle: 'North Shore Airport Shuttle — Takapuna & Albany',
     seoDesc:
       'Private airport shuttle from the North Shore to Auckland Airport. Door-to-door pickups in Takapuna, Albany, Devonport, Browns Bay, Glenfield and Birkenhead. Fixed price, flight tracking, book online.',
     intro:
@@ -45,7 +45,7 @@ export const AREAS = {
     name: 'West Auckland',
     short: 'West Auckland',
     driveTime: '30–40',
-    seoTitle: 'West Auckland Airport Shuttle — Henderson, New Lynn & Titirangi',
+    seoTitle: 'West Auckland Airport Shuttle — Henderson & New Lynn',
     seoDesc:
       'Private airport shuttle from West Auckland to Auckland Airport. Door-to-door pickups in Henderson, New Lynn, Te Atatu, Massey, Titirangi and Hobsonville. Fixed price, 24/7, book online.',
     intro:
@@ -61,7 +61,7 @@ export const AREAS = {
     name: 'South Auckland',
     short: 'South Auckland',
     driveTime: '10–25',
-    seoTitle: 'South Auckland Airport Shuttle — Manukau, Papakura & Pukekohe',
+    seoTitle: 'South Auckland Airport Shuttle — Manukau & Papakura',
     seoDesc:
       'Private airport shuttle from South Auckland to Auckland Airport. Door-to-door pickups in Manukau, Papatoetoe, Manurewa, Papakura, Takanini and Pukekohe. Fixed price, flight tracking, book online.',
     intro:
@@ -77,7 +77,7 @@ export const AREAS = {
     name: 'East Auckland',
     short: 'East Auckland',
     driveTime: '25–40',
-    seoTitle: 'East Auckland Airport Shuttle — Howick, Botany & Pakuranga',
+    seoTitle: 'East Auckland Airport Shuttle — Howick & Botany',
     seoDesc:
       'Private airport shuttle from East Auckland to Auckland Airport. Door-to-door pickups in Howick, Botany, Pakuranga, Half Moon Bay, Beachlands and St Heliers. Fixed price, 24/7, book online.',
     intro:

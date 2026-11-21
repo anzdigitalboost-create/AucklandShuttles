@@ -21,7 +21,7 @@ export default function Layout() {
 
       {/* Sticky mobile bar — one tap to call or to a live price */}
       {showStickyCta && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-ink/95 backdrop-blur-md border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] flex gap-2">
+        <nav aria-label={t('nav.bookRide')} className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-ink/95 backdrop-blur-md border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] flex gap-2">
           <a
             href={`tel:${PHONE_TEL}`}
             aria-label={t('nav.call')}
@@ -36,7 +36,7 @@ export default function Layout() {
             {t('sticky')}
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </div>
+        </nav>
       )}
     </div>
   )

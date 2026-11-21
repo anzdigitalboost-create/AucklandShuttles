@@ -352,5 +352,7 @@ export default {
     hobbiton: { title: '오클랜드 – 호비튼 셔틀 — 전용 당일 이동', desc: '오클랜드에서 마타마타의 호비튼 영화 세트장까지 다녀오는 전용 셔틀. 전용 차량과 원하는 일정, 차량당 최대 11명에 고정 요금 하나.' },
     about: { title: 'Auckland Shuttles 소개', desc: 'Auckland Shuttles는 Book A Ride NZ가 운영하는 오클랜드 공항 및 전용 셔틀 서비스입니다. 현지 기사, 신형 토요타 하이에이스 밴, 고정 요금 온라인 예약.' },
     contact: { title: 'Auckland Shuttles 문의', desc: '022 355 2808 또는 이메일로 Auckland Shuttles에 문의하세요. 24시간 온라인 예약으로 오클랜드 셔틀의 고정 요금을 즉시 확인할 수 있습니다.' },
+    terms: { title: "이용 약관", desc: "Book A Ride NZ가 운영하는 Auckland Shuttles의 예약 약관: 결제, 취소 및 환불, 대기 시간, 수하물, 책임." },
+    privacy: { title: "개인정보 처리방침", desc: "Auckland Shuttles와 운영사 Book A Ride NZ가 개인정보를 수집, 이용, 보호하는 방법." },
   },
 }

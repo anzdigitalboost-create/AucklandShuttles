@@ -55,10 +55,10 @@ export default function Services() {
       <section className="section-padding bg-slate-50">
         <div className="container-max grid lg:grid-cols-2 gap-12 items-center max-w-5xl">
           <img
-            src="/images/fleet-van.jpg"
+            src="/images/fleet-van.webp"
             alt={t('services.fleetAlt')}
             className="rounded-3xl shadow-xl w-full h-[420px] object-cover"
-            loading="lazy"
+            width="840" height="1120" loading="lazy" decoding="async"
           />
           <div>
             <span className="eyebrow">{t('services.fleetEyebrow')}</span>

@@ -86,8 +86,9 @@ export default function Home() {
               className="hidden lg:block relative"
             >
               <img
-                src="/images/fleet-van.jpg"
+                src="/images/fleet-van.webp"
                 alt={t('home.fleetAlt')}
+                width="840" height="1120" loading="lazy" decoding="async"
                 className="rounded-[2rem] w-full h-[520px] object-cover shadow-2xl ring-1 ring-white/20"
               />
               <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3">

@@ -2,16 +2,18 @@
 
 // Auckland Shuttles brand palette — harbour blue on deep navy with a warm
 // amber accent. `brand` is the name to use in this repo's own components.
+// DEFAULT is chosen for contrast: 5.1:1 with white and 4.7:1 on brand-50, so
+// it passes WCAG AA as text and as a button background. Do not lighten it.
 const brand = {
-  DEFAULT: '#1D7FE5',
+  DEFAULT: '#186DCC',
   50: '#EEF6FE',
   100: '#D9EAFD',
   200: '#B5D6FA',
   300: '#7FB8F4',
-  400: '#1D7FE5',
-  500: '#1668C4',
-  600: '#12539D',
-  700: '#0E3F77',
+  400: '#186DCC',
+  500: '#1459A8',
+  600: '#104785',
+  700: '#0D3A6E',
   800: '#0A2C54',
   900: '#061A33',
 }

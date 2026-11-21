@@ -46,21 +46,21 @@ export default function Footer() {
               <Logo light />
             </Link>
             <p className="text-sm text-slate-400 mb-6 leading-relaxed max-w-xs">{t('footer.blurb')}</p>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-1 text-sm">
               <li>
-                <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-2.5 text-white font-semibold hover:text-sun transition-colors">
+                <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-2.5 py-2 text-white font-semibold hover:text-sun transition-colors">
                   <Phone className="w-4 h-4 text-sun" /> {PHONE_DISPLAY}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${EMAIL}`} className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors">
+                <a href={`mailto:${EMAIL}`} className="flex items-center gap-2.5 py-2 text-slate-300 hover:text-white transition-colors">
                   <Mail className="w-4 h-4 text-sun" /> {EMAIL}
                 </a>
               </li>
-              <li className="flex items-center gap-2.5 text-slate-400">
+              <li className="flex items-center gap-2.5 py-2 text-slate-400">
                 <MapPin className="w-4 h-4 text-sun" /> {t('footer.location')}
               </li>
-              <li className="flex items-center gap-2.5 text-slate-400">
+              <li className="flex items-center gap-2.5 py-2 text-slate-400">
                 <Clock className="w-4 h-4 text-sun" /> {t('footer.open')}
               </li>
             </ul>
@@ -68,11 +68,11 @@ export default function Footer() {
 
           {columns.map(({ title, links }) => (
             <div key={title}>
-              <h3 className="text-white font-semibold mb-4 text-sm font-sans">{title}</h3>
-              <ul className="space-y-2.5">
+              <h2 className="text-white font-semibold mb-4 text-sm font-sans">{title}</h2>
+              <ul className="space-y-1">
                 {links.map((link) => (
                   <li key={link.path}>
-                    <Link to={link.path} className="text-sm text-slate-400 hover:text-white transition-colors duration-200">
+                    <Link to={link.path} className="inline-block py-1.5 text-sm text-slate-400 hover:text-white transition-colors duration-200">
                       {link.label}
                     </Link>
                   </li>
@@ -82,11 +82,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <p>{t('footer.rights', { year: new Date().getFullYear() })}</p>
           <p>
             {t('footer.operated')}{' '}
-            <a href="https://www.bookaride.co.nz" className="text-slate-400 hover:text-white underline underline-offset-2">bookaride.co.nz</a>
+            <a href="https://www.bookaride.co.nz" className="text-slate-300 hover:text-white underline underline-offset-2">bookaride.co.nz</a>
           </p>
         </div>
       </div>

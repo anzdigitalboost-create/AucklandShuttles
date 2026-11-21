@@ -352,5 +352,7 @@ export default {
     hobbiton: { title: '奥克兰至霍比特村接送 — 私人一日往返', desc: '从奥克兰往返玛塔玛塔霍比特村电影拍摄地的私人接送。专属车辆、自定时间，每车最多11人，一个固定价格。' },
     about: { title: '关于 Auckland Shuttles', desc: 'Auckland Shuttles 是由 Book A Ride NZ 运营的奥克兰机场及私人接送服务 — 本地司机、新款丰田 Hiace 面包车，固定价格在线预订。' },
     contact: { title: '联系 Auckland Shuttles', desc: '致电 022 355 2808 或发送邮件联系 Auckland Shuttles。24小时在线预订，任何奥克兰接送均可即时获得固定价格。' },
+    terms: { title: "条款与条件", desc: "由 Book A Ride NZ 运营的 Auckland Shuttles 预订条款：付款、取消与退款、等候时间、行李及责任。" },
+    privacy: { title: "隐私政策", desc: "Auckland Shuttles 及其运营方 Book A Ride NZ 如何收集、使用和保护您的个人信息。" },
   },
 }

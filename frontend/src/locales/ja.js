@@ -352,5 +352,7 @@ export default {
     hobbiton: { title: 'オークランドからホビット村へのシャトル — 貸切日帰り送迎', desc: 'オークランドからマタマタのホビット村映画セットへの貸切往復シャトル。専用車両とご希望のスケジュール、1台最大11名様で1つの固定料金。' },
     about: { title: 'Auckland Shuttles について', desc: 'Auckland Shuttles は Book A Ride NZ が運営するオークランドの空港・貸切シャトルサービス。地元のドライバー、新型トヨタ・ハイエース、固定料金のオンライン予約。' },
     contact: { title: 'Auckland Shuttles へのお問い合わせ', desc: 'Auckland Shuttles へは 022 355 2808 またはメールでご連絡ください。24時間オンライン予約で、オークランドのシャトルの固定料金をすぐに確認できます。' },
+    terms: { title: "利用規約", desc: "Book A Ride NZ が運営する Auckland Shuttles のご予約条件：お支払い、キャンセルと返金、待機時間、お荷物、責任について。" },
+    privacy: { title: "プライバシーポリシー", desc: "Auckland Shuttles と運営会社 Book A Ride NZ による個人情報の収集、利用、保護について。" },
   },
 }

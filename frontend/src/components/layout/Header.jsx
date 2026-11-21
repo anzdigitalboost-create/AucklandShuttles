@@ -46,13 +46,13 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden xl:flex items-center gap-1">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'px-3.5 py-2 text-sm font-medium rounded-full transition-colors duration-200',
+                'px-3.5 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors duration-200',
                 location.pathname === link.path
                   ? 'text-brand bg-brand-50'
                   : 'text-slate-600 hover:text-ink hover:bg-slate-100'
@@ -64,15 +64,15 @@ export default function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3 md:ml-auto xl:ml-0">
           <LanguageSelector />
-          <a href={`tel:${PHONE_TEL}`} className="hidden xl:flex items-center gap-2 text-sm font-semibold text-ink hover:text-brand transition-colors">
+          <a href={`tel:${PHONE_TEL}`} className="hidden 2xl:flex items-center gap-2 text-sm font-semibold text-ink whitespace-nowrap hover:text-brand transition-colors">
             <Phone className="w-4 h-4 text-brand" />
             {PHONE_DISPLAY}
           </a>
           <Link
             to="/book-now"
-            className="bg-brand hover:bg-brand-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors duration-200 shadow-sm"
+            className="bg-brand hover:bg-brand-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-colors duration-200 shadow-sm"
           >
             {t('nav.bookRide')}
           </Link>
@@ -81,7 +81,7 @@ export default function Header() {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2.5 rounded-full text-ink bg-slate-100 hover:bg-slate-200 transition-colors"
+          className="xl:hidden p-2.5 rounded-full text-ink bg-slate-100 hover:bg-slate-200 transition-colors"
           aria-label={t('common.menu')}
           aria-expanded={mobileOpen}
         >
@@ -91,7 +91,7 @@ export default function Header() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-200 px-4 pb-5 pt-3 space-y-1 animate-slide-down">
+        <div className="xl:hidden bg-white border-t border-slate-200 px-4 pb-5 pt-3 space-y-1 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.path}

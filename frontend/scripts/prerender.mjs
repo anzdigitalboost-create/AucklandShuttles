@@ -15,7 +15,7 @@ import { ROUTES } from '../src/data/routes.js'
 
 const SITE_URL = 'https://www.aucklandshuttles.co.nz'
 const SITE_NAME = 'Auckland Shuttles'
-const DEFAULT_TITLE = `${SITE_NAME} — Auckland Airport Shuttle & Private Shuttle Service`
+const DEFAULT_TITLE = `${SITE_NAME} — Airport & Private Shuttle Service`
 const LANGS = ['en', 'zh', 'ja', 'ko', 'es', 'fr']
 
 const distDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../dist')

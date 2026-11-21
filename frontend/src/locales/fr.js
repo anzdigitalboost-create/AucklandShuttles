@@ -353,5 +353,7 @@ export default {
     hobbiton: { title: "Navette d'Auckland à Hobbiton — transfert privé à la journée", desc: "Navette privée aller-retour d'Auckland au décor de Hobbiton à Matamata. Votre véhicule et votre horaire, un prix fixe par véhicule pour jusqu'à 11 passagers." },
     about: { title: 'À propos de Auckland Shuttles', desc: "Auckland Shuttles est le service de navette aéroport et privée d'Auckland exploité par Book A Ride NZ : chauffeurs locaux, vans Toyota Hiace récents et réservation en ligne à prix fixes." },
     contact: { title: 'Contacter Auckland Shuttles', desc: "Contactez Auckland Shuttles au 022 355 2808 ou par e-mail. Réservez en ligne 24h/24 et obtenez immédiatement un prix fixe pour n'importe quelle navette à Auckland." },
+    terms: { title: "Conditions générales", desc: "Conditions de réservation de Auckland Shuttles, exploité par Book A Ride NZ : paiement, annulation et remboursements, temps d'attente, bagages et responsabilité." },
+    privacy: { title: "Politique de confidentialité", desc: "Comment Auckland Shuttles et son exploitant Book A Ride NZ collectent, utilisent et protègent vos données personnelles." },
   },
 }
