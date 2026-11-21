@@ -149,8 +149,13 @@ i18n
     },
   })
 
-i18n.on('languageChanged', (lng) => {
-  document.documentElement.lang = lng
-})
+// Keep <html lang> in step with the active language. languageChanged does not
+// fire for the language detected at startup (e.g. ?lang=zh), so set it once
+// here as well.
+const setHtmlLang = (lng) => {
+  document.documentElement.lang = (lng || 'en').split('-')[0]
+}
+i18n.on('languageChanged', setHtmlLang)
+setHtmlLang(i18n.resolvedLanguage || i18n.language)
 
 export default i18n
