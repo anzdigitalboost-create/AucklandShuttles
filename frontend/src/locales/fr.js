@@ -200,7 +200,7 @@ export default {
       intro: "Vous séjournez en ville ? Votre navette vient vous chercher dans le hall de l'hôtel, devant votre appartement ou au bureau et file droit au terminal : aucun arrêt pour d'autres passagers, aucune valise à traîner jusqu'à un arrêt de bus.",
       points: [
         { title: 'Prise en charge hôtels et appartements', text: "Nous vous retrouvons à la porte de n'importe quel hôtel, appart-hôtel ou Airbnb du centre. Indiquez le nom de l'immeuble à la réservation." },
-        { title: 'Liaisons avec le terminal de croisière', text: "Queens Wharf et Princes Wharf sont à quelques minutes du centre : nous assurons les transferts entre l'aéroport et le navire chaque jour d'escale." },
+        { title: 'Liaisons avec le terminal de croisière', text: "Queens Wharf et Princes Wharf sont à quelques minutes du centre : nous assurons les transferts entre l'aéroport et le navire chaque jour de départ ou d'arrivée de croisière." },
         { title: 'Vols matinaux assurés', text: "La circulation sur l'autoroute en sortie de ville se densifie vers 6 h 30. Réservez l'heure souhaitée et nous organisons le trajet en conséquence." },
       ],
     },
@@ -245,7 +245,7 @@ export default {
       points: [
         { title: 'Direct, sans correspondance', text: "Votre navette va de votre adresse au terminal sans changement : l'itinéraire le plus simple depuis les quartiers est." },
         { title: 'Familles bien accueillies', text: 'Les sièges enfant sont gratuits. Indiquez les âges à la réservation et les bons sièges seront installés avant la prise en charge.' },
-        { title: 'À toute heure', text: "Départs de nuit et arrivées à minuit sont courants. Les prises en charge entre 23 h et 6 h font l'objet d'un supplément de nuit de 15 NZD, affiché avant le paiement." },
+        { title: 'À toute heure', text: "Départs de nuit et arrivées à minuit sont courants. Les prises en charge entre 23 h et 5 h 59 font l'objet d'un supplément de nuit de 15 NZD, affiché avant le paiement." },
       ],
     },
   },

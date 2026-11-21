@@ -245,7 +245,7 @@ export default {
       points: [
         { title: 'Directo, sin trasbordos', text: 'Su shuttle va de su dirección a la terminal sin cambios: la ruta más sencilla desde los barrios del este.' },
         { title: 'Familias atendidas', text: 'Las sillas infantiles son gratuitas. Díganos las edades al reservar y las sillas adecuadas estarán instaladas antes de la recogida.' },
-        { title: 'A cualquier hora', text: 'Las salidas de madrugada y las llegadas a medianoche son habituales. Las recogidas entre las 23:00 y las 6:00 tienen un suplemento nocturno de 15 NZD, que se muestra antes de pagar.' },
+        { title: 'A cualquier hora', text: 'Las salidas de madrugada y las llegadas a medianoche son habituales. Las recogidas entre las 23:00 y las 5:59 tienen un suplemento nocturno de 15 NZD, que se muestra antes de pagar.' },
       ],
     },
   },

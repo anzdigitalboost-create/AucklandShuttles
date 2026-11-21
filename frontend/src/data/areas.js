@@ -86,7 +86,7 @@ export const AREAS = {
     points: [
       { title: 'Direct, no transfers', text: 'Your shuttle goes from your address to the terminal without changes — the simplest route from the eastern suburbs.' },
       { title: 'Families sorted', text: 'Child seats are free of charge. Tell us ages when you book and the right seats are fitted before pickup.' },
-      { title: 'Any hour', text: 'Red-eye departures and midnight arrivals are routine. Pickups between 11pm and 6am carry a $15 night surcharge, shown before you pay.' },
+      { title: 'Any hour', text: 'Red-eye departures and midnight arrivals are routine. Pickups between 11pm and 5:59am carry a $15 night surcharge, shown before you pay.' },
     ],
   },
 }
