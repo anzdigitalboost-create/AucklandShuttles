@@ -44,6 +44,15 @@ per file.
 - Phone: 022 355 2808. Email: info@bookaride.co.nz. Both live in
   `src/config/siteConfig.js` — import from there, never hard-code in new UI.
 
+## Tracking
+
+Google Tag Manager container `GTM-KWZNCMBQ` is installed in
+`frontend/index.html` (head script + body noscript), added at the owner's
+request on 2026-11-27. GA4 and any ad tags are configured inside GTM, not in
+this repo. It loads on every page, including the mirrored booking pages. The
+platform repo's "no third-party tracker" rule covers the platform, and the
+owner chose not to change it; do not add GTM there without their say-so.
+
 ## Content rules
 
 - Keyword focus: "Auckland shuttle", "Auckland airport shuttle", plus the area
